@@ -6,7 +6,11 @@
 This is the core function for the generation of a separation plot.
 }
 \usage{
-separationplot(pred, actual, type = "line", line = T, lwd1 = 0.5, lwd2 = 0.5, heading = "",  xlab = "", shuffle = T, width = 9, height = 1.2, col0 = "#FEF0D9", col1 = "#E34A33", flag = NULL, flagcol = 1, file = NULL, newplot = T, locate = NULL, rectborder = NA, show.expected = F, zerosfirst = T, BW=F)
+separationplot(pred, actual, type = "line", line = T, lwd1 = 0.5, lwd2 = 0.5,
+               heading = "",  xlab = "", shuffle = T, width = 9, height = 1.2,
+               col0 = "#FEF0D9", col1 = "#E34A33", flag = NULL, flagcol = 1,
+               file = NULL, newplot = T, locate = NULL, rectborder = NA,
+               show.expected = F, zerosfirst = T, BW = F)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -95,7 +99,8 @@ model1<-glm(a[,2]~a[,1], family=binomial(link = "logit"))
 library(Hmisc)
 somers2(model1$fitted.values, model1$y)
 
-separationplot(pred=model1$fitted.values, actual=model1$y, type="rect", line=TRUE, show.expected=TRUE, heading="Example 1")
+separationplot(pred=model1$fitted.values, actual=model1$y, type="rect",
+               line=TRUE, show.expected=TRUE, heading="Example 1")
 
 
 }

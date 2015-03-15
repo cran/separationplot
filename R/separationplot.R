@@ -1,9 +1,6 @@
 separationplot <-
 function(pred, actual, type="line", line=T, lwd1=0.5, lwd2=0.5, heading="", xlab="", shuffle=T, width=9, height=1.2, col0="#FEF0D9", col1="#E34A33", flag=NULL, flagcol=1, file=NULL, newplot=T, locate=NULL, rectborder=NA, show.expected=F, zerosfirst=T, BW=F){
 
-	# redefine the quartz function if the user is on a Windows platform:
-	if (.Platform[[1]]=="windows") quartz<-function(...) windows(...)
-	
 	# do some error-testing first:
 	if (is.vector(pred)==F) stop("The pred argument needs to be a vector")
 	if (is.vector(actual)==F) stop("The actual argument needs to be a vector")
@@ -35,7 +32,7 @@ function(pred, actual, type="line", line=T, lwd1=0.5, lwd2=0.5, heading="", xlab
 	
 	# open the plot space only if newplot==T:
 	if (newplot==T){
-		if (is.null(file)) quartz(width=width, height=height)
+		if (is.null(file)) dev.new(width=width, height=height)
 		if (!is.null(file)) pdf(file=file, width=width, height=height)
 		par(mgp=c(3,0,0), lend=2, mar=c(2,2,2,2))	
 		} # close newplot==T condition
@@ -128,9 +125,8 @@ function(pred, actual, type="line", line=T, lwd1=0.5, lwd2=0.5, heading="", xlab
 	# bands plot:
 	if (type=="bands"){
 		
-		require(RColorBrewer)
 		breaks<-seq(0,0.9,0.1)
-		cols<-brewer.pal(9,"Reds")
+		cols<-RColorBrewer::brewer.pal(9,"Reds")
 		a<-colorRampPalette(cols)
 		cols<-a(10)
 		

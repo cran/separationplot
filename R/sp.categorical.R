@@ -1,15 +1,12 @@
 sp.categorical <-
 function(pred, actual, file=NULL, cex=1.5, ...){
 	
-	# redefine the quartz function if the user is on a Windows platform:
-	if (.Platform[[1]]=="windows") quartz<-function(...) windows(...)
-	
 	# first determine the number of categories:
 	ncat<-ncol(pred)
 	
 	# open the plot space
 	width<-9; height<-ncat
-	if (is.null(file)) quartz(width=width, height=height)
+	if (is.null(file)) dev.new(width=width, height=height)
 	if (!is.null(file)) pdf(file=file, width=width, height=height)
 	par(mgp=c(0,0,0), lend=2, mar=c(0,0,0,0))
 	layout(mat=matrix(data=1:(ncat*2), nrow=ncat, ncol=2, byrow=T), widths=c(7,1))
