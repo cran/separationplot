@@ -1,6 +1,6 @@
 separationplot <-
 function(pred, actual, type="line", line=T, lwd1=0.5, lwd2=0.5, heading="", xlab="", shuffle=T, width=9, height=1.2, col0="#FEF0D9", col1="#E34A33", flag=NULL, flagcol=1, file=NULL, newplot=T, locate=NULL, rectborder=NA, show.expected=F, zerosfirst=T, BW=F){
-
+	
 	# do some error-testing first:
 	if (is.vector(pred)==F) stop("The pred argument needs to be a vector")
 	if (is.vector(actual)==F) stop("The actual argument needs to be a vector")
@@ -126,7 +126,7 @@ function(pred, actual, type="line", line=T, lwd1=0.5, lwd2=0.5, heading="", xlab
 	if (type=="bands"){
 		
 		breaks<-seq(0,0.9,0.1)
-		cols<-RColorBrewer::brewer.pal(9,"Reds")
+		cols<-brewer.pal(9,"Reds")
 		a<-colorRampPalette(cols)
 		cols<-a(10)
 		
@@ -164,5 +164,4 @@ function(pred, actual, type="line", line=T, lwd1=0.5, lwd2=0.5, heading="", xlab
 	
 	# return the resultsmatrix
 	invisible(resultsmatrix)
-	} # close separationplot function
-
+	}

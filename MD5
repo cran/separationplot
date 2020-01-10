@@ -1,7 +1,7 @@
-dc30c608683008cc8d0e7b31b14a716e *DESCRIPTION
-ea5553f4524487ac92fc472fdee81def *NAMESPACE
-c09701b20b61504d5924abf7548d64c6 *R/separationplot.R
-c02c3f996a1bbf93b57b468420bc61af *R/sp.categorical.R
-29720daa71594e769a81cf7236892278 *man/separationplot-package.Rd
-7ab4f316894967e9bfa37fa82ae3222a *man/separationplot.Rd
-da12aaac0d1b2b6f528825f96a0913f5 *man/sp.categorical.Rd
+86a9ad550bb124ceadaa496cf4641e5a *DESCRIPTION
+1d91513517c2d5c597d64e55fa389687 *NAMESPACE
+ef20c2cfe743530b8d0bdbd4cc518c78 *R/separationplot.R
+74de4a4841716ba09df21e98955a6c6d *R/sp.categorical.R
+4334d68d3c0da6254cd7b363ef68de48 *man/separationplot-package.Rd
+b7c9452f34dd8b39f20d339c215e10db *man/separationplot.Rd
+9ed57bad91bcabd3d9888c123c72c85b *man/sp.categorical.Rd

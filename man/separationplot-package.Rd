@@ -7,27 +7,26 @@
 \tabular{ll}{
 Package: \tab separationplot\cr
 Type: \tab Package\cr
-Version: \tab 1,0\cr
-Date: \tab 2011-06-13\cr
+Version: \tab 1,1\cr
+Date: \tab 2020-01-07\cr
 License: NA\cr
 }
-This package is still in development.  Please contact Brian Greenhill <\email{brian.d.greenhill@dartmouth.edu}> with any questions you may have.
+Please contact Brian Greenhill <\email{bgreenhill@albany.edu}> with any questions you may have.
 }
 \author{
 Brian D. Greenhill, Michael D. Ward and Audrey Sacks
 
-Maintainer: Brian Greenhill <\email{brian.d.greenhill@dartmouth.edu}>
+Maintainer: Brian Greenhill <\email{bgreenhill@albany.edu}>
 }
-\references{
-Contact Brian Greenhill <\email{brian.d.greenhill@dartmouth.edu}> for a copy of the paper that explains the concept of the separation plot. }
+\references{Greenhill, Brian, Michael D. Ward, and Audrey Sacks. "The separation plot: A new visual method for evaluating the fit of binary models." American Journal of Political Science 55.4 (2011): 991-1002.
+}
 \keyword{ separationplot }
 
 \examples{
 \donttest{
 # Very simple example from the introduction to the paper:
 #
-separationplot(pred=c(0.774, 0.364, 0.997, 0.728, 0.961, 0.422),
-               actual=c(0,0,1,0,1,1), shuffle=FALSE, line=FALSE,
-               type="rect", rectborder=1)
+separationplot(pred=c(0.774, 0.364, 0.997, 0.728, 0.961, 0.422), 
+actual=c(0,0,1,0,1,1), shuffle=FALSE, line=FALSE, type="rect", rectborder=1)
 }
 }

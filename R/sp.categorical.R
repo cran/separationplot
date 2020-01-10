@@ -1,6 +1,6 @@
 sp.categorical <-
 function(pred, actual, file=NULL, cex=1.5, ...){
-	
+		
 	# first determine the number of categories:
 	ncat<-ncol(pred)
 	
@@ -27,5 +27,4 @@ function(pred, actual, file=NULL, cex=1.5, ...){
 	# close pdf device:
 	if (!is.null(file)) dev.off()
 	
-	}# close sp.categorical function
-
+	}

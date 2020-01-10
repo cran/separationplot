@@ -1,6 +1,4 @@
-# Default NAMESPACE created by R
-# Remove the previous line if you edit this file
-
-# Export all names
-exportPattern(".")
-
+exportPattern("^[[:alpha:]]+")
+import(Hmisc, MASS, RColorBrewer, foreign)
+importFrom("grDevices", "colorRampPalette", "dev.new", "dev.off", "pdf")
+importFrom("graphics", "layout", "legend", "lines", "locator", "par", "plot", "plot.new", "points", "rect", "segments", "text", "title")
