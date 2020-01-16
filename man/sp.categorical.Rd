@@ -29,12 +29,10 @@ Please see the paper by Greenhill, Ward and Sacks for more information on the fe
 \value{
 None.  This function is used for its side effects only.
 }
-\references{
-Contact Brian Greenhill <\email{brian.d.greenhill@dartmouth.edu}> for a copy of the paper by Greenhill, Ward and Sacks that explains the concept of the separation plot.}
+\references{Greenhill, Brian, Michael D. Ward, and Audrey Sacks. "The separation plot: A new visual method for evaluating the fit of binary models." American Journal of Political Science 55.4 (2011): 991-1002.}
+
 \author{
-Brian Greenhill <\email{brian.d.greenhill@dartmouth.edu}>}
-\note{
-This function is still being developed.  Please contact Brian Greenhill with any questions or comments.}
+Brian Greenhill <\email{bgreenhill@albany.edu}>}
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 

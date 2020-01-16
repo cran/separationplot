@@ -65,12 +65,10 @@ Please see the paper by Greenhill, Ward and Sacks for more information on the fe
 
   \item{resultsmatrix }{The dataframe containing the data used to generate the separation plot.  The first column is the vector of predicted probabilities, the second is the vector of actual outcomes, the third indicates which observations have been flagged using the \code{flag} argument above, the fourth gives the position of each observation on the horizontal axis of the separation plot, and the fifth gives the color used to plot each observation. }
 }
-\references{
-Contact Brian Greenhill <\email{brian.d.greenhill@dartmouth.edu}> for a copy of the paper by Greenhill, Ward and Sacks that explains the concept of the separation plot. }
+\references{Greenhill, Brian, Michael D. Ward, and Audrey Sacks. "The separation plot: A new visual method for evaluating the fit of binary models." American Journal of Political Science 55.4 (2011): 991-1002.}
+
 \author{
-Brian Greenhill <\email{brian.d.greenhill@dartmouth.edu}>}
-\note{
-This function is still being developed.  Please contact Brian Greenhill with any questions or comments.}
+Brian Greenhill <\email{bgreenhill@albany.edu}>}
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
