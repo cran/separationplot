@@ -37,9 +37,9 @@ Width of the plot space (in inches).}
   \item{height}{
 Height of the plot space (in inches).}
   \item{col0}{
-Color of the predicted probabilities corresponding to 0s in the \code{actual} vector.  The default color has been chosen from one of the palettes on \url{http://colorbrewer2.org/}.}
+Color of the predicted probabilities corresponding to 0s in the \code{actual} vector.  The default color has been chosen from one of the palettes on \url{https://colorbrewer2.org/}.}
   \item{col1}{
-Color of the predicted probabilities corresponding to 1s in the \code{actual} vector.  The default color has been chosen from one of the palettes on \url{http://colorbrewer2.org/}.}
+Color of the predicted probabilities corresponding to 1s in the \code{actual} vector.  The default color has been chosen from one of the palettes on \url{https://colorbrewer2.org/}.}
   \item{flag}{
 A vector of row number(s) in the \code{actual} vector corresponding to the observations to flag.}
   \item{flagcol}{
@@ -60,7 +60,7 @@ When \code{type="line"}, should the 0s be plotted in the background, and the 1s 
 Should the Black and White color scheme be implemented?}
 }
 \details{
-Please see the paper by Greenhill, Ward and Sacks for more information on the features of the separation plot.}
+Please see the paper by Greenhill, Ward and Sacks (2011) for more information on the features of the separation plot.}
 \value{
 
   \item{resultsmatrix }{The dataframe containing the data used to generate the separation plot.  The first column is the vector of predicted probabilities, the second is the vector of actual outcomes, the third indicates which observations have been flagged using the \code{flag} argument above, the fourth gives the position of each observation on the horizontal axis of the separation plot, and the fifth gives the color used to plot each observation. }
@@ -76,7 +76,6 @@ Brian Greenhill <\email{bgreenhill@albany.edu}>}
 See \code{\link{sp.categorical}} for plotting separation plots for models with polytomous dependent variables.}
 
 \examples{
-\donttest{
 
 # Create a separation plot for a simple logit model:
 
@@ -101,7 +100,6 @@ line=TRUE, show.expected=TRUE, heading="Example 1")
 
 
 }
-}
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{separationplot}
+\keyword{ separationplot }

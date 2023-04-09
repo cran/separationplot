@@ -40,35 +40,18 @@ Brian Greenhill <\email{bgreenhill@albany.edu}>}
 See \code{\link{separationplot}} for a description of the core function for generating separation plots.
 }
 \examples{
-\donttest{
 
-# Example using an ordered probit model from Neumayer (2005) "Do international human rights
-# treaties improve respect for human rights?"  Journal of Conflict Resolution, 49 (6), 2005,
-# pp. 925-953 
+# This example borrows code from the example given in the documentation for the polr() function 
+# that uses the "housing" dataset:
+options(contrasts = c("contr.treatment", "contr.poly"))
+house.plr <- polr(Sat ~ Infl + Type + Cont, weights = Freq, data = housing)
 
-library(foreign) 
-library(MASS)
+sp.categorical(pred=house.plr$fitted.values,
+actual=as.character(house.plr$model[,1]), type="rect", lwd2=2)
+ # not a very good fit!
 
-neumayer<-read.dta("http://www2.lse.ac.uk/dataFiles/
-geographyAndEnvironment/Replication/Article\%20for\%20JCR\%20(Human\%20Rights).dta")
 
-# create a new dataframe called "data4" that just contains the 
-# variables we're interested in (and with simpler names).
-data6<-na.omit(data.frame(DV=neumayer$aipts, laggedDV=neumayer$laipts, 
-rat=neumayer$iccprmainrat, ingo.pc=neumayer$wiikngointerpc, 
-dem=neumayer$politycorr020, extwar=neumayer$uppsalaexternalincountry, 
-civwar=neumayer$uppsalainternal, gdp=neumayer$lngdp1995pc, 
-pop=neumayer$lnpop, country=neumayer$country, year=neumayer$year))
-
-# run the model (note that this is Model 6 of Table 2 of the published paper):
-model6<-polr(as.ordered(DV)~laggedDV +rat + rat:ingo.pc + rat:dem 
-+ingo.pc  +dem +extwar +civwar+gdp +pop, data=data6, Hess=T, method="probit")
-summary(model6) 
-
-sp.categorical(pred=model6$fitted.values, actual=as.character(model6$model[,1]), cex=2.5)
-
-}
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{sp.categorical}
+\keyword{ sp.categorical }
